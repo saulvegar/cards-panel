@@ -1,0 +1,55 @@
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card > h3 {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.card > p {
+  margin: 0;
+}
+
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-button::before,
+.remove-button::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #ff4d4d;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.remove-button::before {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.remove-button::after {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.remove-button:hover::before,
+.remove-button:hover::after {
+  background-color: #ff1a1a;
+}
